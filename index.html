@@ -58,7 +58,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;ba
  <h2>🍺 The Beer Pong Battle</h2><p class="sub">16 teams. Two players each. One champion. Double elimination — lose twice and you're out.</p>
  <div class="grid">
   <div><b>ROUND 1</b><p class="note">Random draw decides who faces who.</p></div>
-  <div><b>THE ROAD TO GLORY</b><p class="note">Quarterfinals → Semifinals → Championship.</p></div>
+  <div><b>THE ROAD TO GLORY</b><p class="note">Winners bracket + losers bracket → Grand final.</p></div>
  </div>
  <div class="alert">The bracket will be randomized after registration closes. No seeding. No favors. Santa sees all.</div>
  <div id="bracketArea" class="hidden"><h2>🏆 Official Tournament Bracket</h2><div id="bracket"></div></div>
@@ -67,11 +67,11 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;ba
  <div class="snow">✦ ❄ ✦ ❄ ✦</div><h2 style="color:white">See you at Mi Casa!</h2><p>Bring your Christmas spirit. Leave your excuses at the North Pole.</p><b>FRIENDSMAS 2026</b>
 </section>
 </main>
-<footer class="footer wrap">Made with questionable holiday cheer · <b>FRIENDSMAS 2026</b><br><span id="adminLink" class="admin">Organizer access</span></footer>
+<footer class="footer wrap">Made with questionable holiday cheer · <b>FRIENDSMAS 2026</b></footer>
 <iframe name="submitFrame" id="submitFrame" class="hidden"></iframe>
 <script>
 /* SETUP: Paste your deployed Google Apps Script Web App URL below. */
-const API_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const API_URL = "https://script.google.com/macros/s/AKfycbxSNJB-_7i5GrJp-prCjr8zxcZCcIqJBbht9wO15xAY_lyxunt8yPO5kKWLOx04Wh11/exec";
 const form=document.getElementById('regForm'), msg=document.getElementById('message');
 let pendingSubmit=false;
 window.addEventListener('message',e=>{
@@ -109,13 +109,6 @@ form.addEventListener('submit',e=>{
  Object.entries(data).forEach(([k,v])=>{const i=document.createElement('input');i.type='hidden';i.name=k;i.value=v;f.appendChild(i)});
  document.body.appendChild(f);f.submit();f.remove();
  setTimeout(()=>{if(pendingSubmit){show('Your submission may still be processing. If you do not see confirmation, please contact the organizer before submitting again.','error');pendingSubmit=false;}},12000);
-});
-document.getElementById('adminLink').addEventListener('click',()=>{
- const key=prompt('Organizer key (set this in the Google Apps Script project settings):');if(!key)return;
- if(API_URL.startsWith('PASTE_')){alert('Registration backend is not connected yet.');return;}
- const frame=document.getElementById('submitFrame');
- frame.src=API_URL+'?action=bracket&key='+encodeURIComponent(key);
- show('Loading the latest bracket…');
 });
 function renderBracket(bracket){
  const area=document.getElementById('bracketArea'), root=document.getElementById('bracket');area.classList.remove('hidden');
