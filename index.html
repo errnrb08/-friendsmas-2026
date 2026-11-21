@@ -75,7 +75,7 @@ const API_URL = "https://script.google.com/macros/s/AKfycbxSNJB-_7i5GrJp-prCjr8z
 const form=document.getElementById('regForm'), msg=document.getElementById('message');
 let pendingSubmit=false;
 window.addEventListener('message',e=>{
- if(e.source!==document.getElementById('submitFrame').contentWindow)return;
+if(!e.data)return;
  let data=e.data;if(typeof data==='string'){try{data=JSON.parse(data)}catch(_){return}}
  if(!data||typeof data.ok!=='boolean')return;
  if(data.bracket){renderBracket(data.bracket);show('Organizer bracket loaded.','success');return;}
