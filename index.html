@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Friendsmas 2026 — Christmas Chaos Championship</title>
+<meta name="description" content="Friendsmas 2026 — RSVP and enter the two-player beer pong championship.">
+<style>
+:root{--pine:#08291f;--pine2:#0d3b2c;--red:#a91f32;--gold:#f4c969;--cream:#fff7e6;--ink:#18231d;--muted:#b7c9bd}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#1b6548 0%,var(--pine) 54%,#041710 100%);color:var(--cream);font-family:system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#fff 1px,transparent 1.5px);background-size:42px 42px;mask-image:linear-gradient(#000,transparent 75%)}
+.lights{height:24px;display:flex;justify-content:space-around;align-items:flex-start;padding:0 4%;position:relative}.lights span{width:10px;height:15px;border-radius:50%;background:#f6d56d;box-shadow:0 0 16px currentColor;position:relative}.lights span:nth-child(3n){background:#ed4355}.lights span:nth-child(3n+1){background:#55d69b}.lights span:before{content:"";position:absolute;width:2px;height:8px;background:#b8a98a;top:-7px;left:4px}
+.wrap{width:min(980px,92%);margin:auto}.hero{text-align:center;padding:48px 0 32px}.eyebrow{letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:800;font-size:.76rem}.hero h1{font-family:Georgia,serif;font-size:clamp(3.1rem,10vw,7rem);line-height:.88;margin:16px 0 12px;color:#fff4d9;text-shadow:0 5px 0 #741827,0 10px 30px #0008}.hero h1 span{display:block;color:var(--gold);font-size:.48em;letter-spacing:.12em;margin-top:18px}.tagline{font-size:clamp(1rem,2.5vw,1.25rem);color:#d7e7dc;margin:20px auto 26px}.stamp{display:inline-block;background:var(--red);color:white;padding:9px 18px;transform:rotate(-3deg);font-weight:900;letter-spacing:.1em;border:2px dashed #ffd7a0;box-shadow:0 5px 15px #0005}
+.eventbar{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:26px auto;max-width:780px}.event{background:#ffffff0d;border:1px solid #ffffff24;border-radius:15px;padding:16px 10px;backdrop-filter:blur(8px)}.event b{display:block;color:var(--gold);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}.event span{display:block;font-weight:750;margin-top:5px}.btn{display:inline-flex;justify-content:center;align-items:center;background:var(--gold);color:#241b0a;text-decoration:none;border:0;border-radius:999px;padding:15px 25px;font-weight:900;font-size:1rem;cursor:pointer;box-shadow:0 5px 0 #9e6f20;transition:.15s}.btn:hover{transform:translateY(-2px);box-shadow:0 7px 0 #9e6f20}.btn.red{background:var(--red);color:white;box-shadow:0 5px 0 #65111e}.section{margin:26px auto;background:#fdf8e9;color:var(--ink);border-radius:24px;padding:clamp(20px,4vw,36px);box-shadow:0 18px 45px #0003}.section h2{font-family:Georgia,serif;font-size:2rem;margin:0 0 8px;color:var(--pine)}.sub{color:#66766b;margin:0 0 22px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:.85rem;font-weight:800;color:#33473a}input,select{width:100%;padding:13px 14px;border:1px solid #cbd6c9;border-radius:11px;background:white;font:inherit;color:#17251c}input:focus,select:focus{outline:3px solid #f4c96988;border-color:#a77a20}.choices{display:flex;gap:10px;flex-wrap:wrap}.choice{display:flex;align-items:center;gap:8px;background:white;border:1px solid #d6dfd2;border-radius:12px;padding:12px;flex:1;min-width:150px;font-weight:650}.choice input{width:auto;accent-color:#0d6846}.hidden{display:none!important}.note{font-size:.82rem;color:#66766b;line-height:1.5}.alert{padding:12px 14px;border-radius:12px;background:#fff0d0;color:#62430c;font-weight:650;margin:14px 0}.success{background:#e3f5e9;color:#155d35}.error{background:#ffe5e5;color:#8d1c28}.divider{height:1px;background:#dce3d8;margin:22px 0}.footer{text-align:center;color:#b8cabe;padding:25px 0 48px;font-size:.85rem}.footer b{color:var(--gold)}.snow{font-size:1.5rem;letter-spacing:.5em;color:#d9eee1}.admin{font-size:.8rem;color:#9eb8a8;text-decoration:underline;cursor:pointer}.bracket{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:12px;overflow-x:auto}.round{background:#eef2e9;border-radius:12px;padding:10px}.round h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#607064}.match{background:white;border:1px solid #d5dfd2;border-radius:8px;margin:9px 0;padding:9px;font-size:.82rem}.team{padding:4px 0;border-bottom:1px solid #edf0eb}.team:last-child{border:0}
+@media(max-width:650px){.eventbar{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero{padding-top:34px}.bracket{grid-template-columns:repeat(4,170px)}}
+</style>
+</head>
+<body>
+<div class="lights" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<header class="hero wrap">
+ <div class="eyebrow">The most wonderful time to get competitive</div>
+ <h1>FRIENDSMAS<span>2026 · CHRISTMAS CHAOS CHAMPIONSHIP</span></h1>
+ <p class="tagline">Good friends. Questionable sweaters. Absolutely unnecessary beer pong rivalries.</p>
+ <div class="stamp">NAUGHTY LIST? NEVER HEARD OF HER.</div>
+ <div class="eventbar">
+  <div class="event"><b>When</b><span>Friday, Dec 18 · 7:00 PM</span></div>
+  <div class="event"><b>Where</b><span>Mi Casa</span></div>
+  <div class="event"><b>RSVP by</b><span>Saturday, Dec 12</span></div>
+ </div>
+ <a class="btn" href="#rsvp">RSVP & ENTER THE CUP ZONE ↓</a>
+</header>
+<main class="wrap">
+<section class="section" id="rsvp">
+ <h2>🎅 Official Friendsmas Check-In</h2>
+ <p class="sub">Tell us if you're coming. Santa's keeping receipts.</p>
+ <form id="regForm">
+  <div class="grid">
+   <div class="field full"><label for="guestName">Your name</label><input id="guestName" name="guestName" required maxlength="80" placeholder="Your name"></div>
+   <div class="field full"><label>Are you coming to Friendsmas?</label><div class="choices">
+    <label class="choice"><input type="radio" name="attending" value="yes" required> Hell yes, I'll be there!</label>
+    <label class="choice"><input type="radio" name="attending" value="no"> Can't make it 😢</label>
+   </div></div>
+   <div class="field full hidden" id="pongQuestion"><label>Entering the Beer Pong Championship?</label><div class="choices">
+    <label class="choice"><input type="radio" name="pong" value="yes"> Bring on the cups 🏆</label>
+    <label class="choice"><input type="radio" name="pong" value="no"> I'm here for the snacks</label>
+   </div></div>
+   <div class="field full hidden" id="teamFields">
+    <div class="alert">🏆 16 teams maximum. Two players per team. Choose your name wisely.</div>
+    <div class="field"><label for="teamName">Team name</label><input id="teamName" name="teamName" maxlength="50" placeholder="e.g. The Jingle Ballers"></div>
+    <div class="field"><label for="player1">Player 1</label><input id="player1" name="player1" maxlength="80" placeholder="Your name"></div>
+    <div class="field"><label for="player2">Player 2</label><input id="player2" name="player2" maxlength="80" placeholder="Your name"></div>
+   </div>
+   <div class="field full"><button class="btn red" type="submit">SEND MY RSVP 🎄</button><p class="note">One RSVP per guest. Tournament entries close with Friendsmas registration on December 12, 2026. Team spots are first-come, first-served, up to 16 teams.</p></div>
+  </div>
+ </form>
+ <div id="message" class="alert hidden" role="status"></div>
+</section>
+<section class="section">
+ <h2>🍺 The Beer Pong Battle</h2><p class="sub">16 teams. Two players each. One champion. Double elimination — lose twice and you're out.</p>
+ <div class="grid">
+  <div><b>ROUND 1</b><p class="note">Random draw decides who faces who.</p></div>
+  <div><b>THE ROAD TO GLORY</b><p class="note">Quarterfinals → Semifinals → Championship.</p></div>
+ </div>
+ <div class="alert">The bracket will be randomized after registration closes. No seeding. No favors. Santa sees all.</div>
+ <div id="bracketArea" class="hidden"><h2>🏆 Official Tournament Bracket</h2><div id="bracket"></div></div>
+</section>
+<section class="section" style="text-align:center;background:#a91f32;color:white">
+ <div class="snow">✦ ❄ ✦ ❄ ✦</div><h2 style="color:white">See you at Mi Casa!</h2><p>Bring your Christmas spirit. Leave your excuses at the North Pole.</p><b>FRIENDSMAS 2026</b>
+</section>
+</main>
+<footer class="footer wrap">Made with questionable holiday cheer · <b>FRIENDSMAS 2026</b><br><span id="adminLink" class="admin">Organizer access</span></footer>
+<iframe name="submitFrame" id="submitFrame" class="hidden"></iframe>
+<script>
+/* SETUP: Paste your deployed Google Apps Script Web App URL below. */
+const API_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const form=document.getElementById('regForm'), msg=document.getElementById('message');
+let pendingSubmit=false;
+window.addEventListener('message',e=>{
+ if(e.source!==document.getElementById('submitFrame').contentWindow)return;
+ let data=e.data;if(typeof data==='string'){try{data=JSON.parse(data)}catch(_){return}}
+ if(!data||typeof data.ok!=='boolean')return;
+ if(data.bracket){renderBracket(data.bracket);show('Organizer bracket loaded.','success');return;}
+ if(data.ok){show('You are on the list! Friendsmas RSVP received. 🎄','success');form.reset();sync();}
+ else show(data.error||'Something went wrong. Please try again or contact the organizer.','error');
+ pendingSubmit=false;
+});
+const pongQ=document.getElementById('pongQuestion'), teamF=document.getElementById('teamFields');
+const byName=n=>document.querySelector(`input[name="${n}"]:checked`);
+function sync(){
+ const attending=byName('attending')?.value;
+ pongQ.classList.toggle('hidden',attending!=='yes');
+ if(attending!=='yes'){document.querySelectorAll('input[name="pong"]').forEach(x=>x.checked=false);teamF.classList.add('hidden');}
+ const pong=byName('pong')?.value;
+ teamF.classList.toggle('hidden',!(attending==='yes'&&pong==='yes'));
+ ['teamName','player1','player2'].forEach(id=>document.getElementById(id).required=attending==='yes'&&pong==='yes');
+}
+form.addEventListener('change',sync);
+function show(text,kind='alert'){msg.textContent=text;msg.className='alert '+kind;}
+form.addEventListener('submit',e=>{
+ e.preventDefault();sync();
+ const attending=byName('attending')?.value, pong=attending==='yes'?(byName('pong')?.value||''): '';
+ const data={action:'register',guestName:document.getElementById('guestName').value.trim(),attending,pong,
+ teamName:document.getElementById('teamName').value.trim(),player1:document.getElementById('player1').value.trim(),player2:document.getElementById('player2').value.trim()};
+ if(attending==='yes'&&!pong){show('Please tell us whether you are entering the tournament.','error');return;}
+ if(pong==='yes'&&(!data.teamName||!data.player1||!data.player2)){show('Team name and both player names are required.','error');return;}
+ if(API_URL.startsWith('PASTE_')){show('The website design is ready, but registration is not live yet. The organizer needs to connect the free registration sheet before sharing this link.','error');return;}
+ if(pendingSubmit)return;
+ pendingSubmit=true;show('Sending your RSVP…');
+ const f=document.createElement('form');f.method='POST';f.action=API_URL;f.target='submitFrame';
+ Object.entries(data).forEach(([k,v])=>{const i=document.createElement('input');i.type='hidden';i.name=k;i.value=v;f.appendChild(i)});
+ document.body.appendChild(f);f.submit();f.remove();
+ setTimeout(()=>{if(pendingSubmit){show('Your submission may still be processing. If you do not see confirmation, please contact the organizer before submitting again.','error');pendingSubmit=false;}},12000);
+});
+document.getElementById('adminLink').addEventListener('click',()=>{
+ const key=prompt('Organizer key (set this in the Google Apps Script project settings):');if(!key)return;
+ if(API_URL.startsWith('PASTE_')){alert('Registration backend is not connected yet.');return;}
+ const frame=document.getElementById('submitFrame');
+ frame.src=API_URL+'?action=bracket&key='+encodeURIComponent(key);
+ show('Loading the latest bracket…');
+});
+function renderBracket(bracket){
+ const area=document.getElementById('bracketArea'), root=document.getElementById('bracket');area.classList.remove('hidden');
+ if(!bracket.length){root.textContent='The organizer has not generated the bracket yet.';return;}
+ const rounds=['Round of 16','Quarterfinals','Semifinals','Championship'];
+ root.innerHTML='<div class="bracket">'+bracket.map((round,i)=>'<div class="round"><h3>'+rounds[i]+'</h3>'+round.map(m=>'<div class="match"><div class="team">'+(m[0]||'BYE')+'</div><div class="team">'+(m[1]||'BYE')+'</div></div>').join('')+'</div>').join('')+'</div>';
+}
+</script>
+</body></html>
